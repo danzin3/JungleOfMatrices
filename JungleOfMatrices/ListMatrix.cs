@@ -29,5 +29,25 @@ namespace JungleOfMatrices
                 Console.WriteLine();
             }
         }
+
+        public static void ColumnWise(List<List<int>> listMatrix)
+        {
+            Console.WriteLine("\nColumn-wise traversal\nFrom top to bottom");
+
+            int rows = listMatrix.Count;
+            int cols = listMatrix.Max(row => row.Count);
+
+            for(int j=0; j<cols; j++)
+            {
+                for(int i=0; i<rows; i++)
+                {
+                    if(j < listMatrix[i].Count)
+                    {
+                        Console.Write($"{listMatrix[i][j]} ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
